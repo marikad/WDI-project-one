@@ -4,7 +4,6 @@ $(function(){
 
 var setup = function(){
 	var words = ['cat', 'dog', 'lizard', 'bunny', 'super'];
-	var lettersGuessed = [];
 	var letters = $('.letters');
 	var player = "";
 
@@ -12,13 +11,21 @@ var setup = function(){
 	$('.letters').on('click', function() {
 	});
 	$('#btn').on('click', function() {
-		var secretWord  = words[Math.floor(Math.random() * words.length)];
-		$('#chosen-word').prepend(secretWord);
-		$('#btn').hide()
-	})
+		$('#chosen-word').html($('input').val());
+	var secretWord  = words[Math.floor(Math.random() * words.length)];
+        
+	})  
 
 } 
 
-function chooseWord(){
+function chooseLetter(){
+	var lettersGuessed = [];
+	for(var i = 0; i < lettersGuessed.length; i++){
 
+
+	}
 }
+
+//one player
+
+
