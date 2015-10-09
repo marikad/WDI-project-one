@@ -1,32 +1,24 @@
+$(function(){
+	setup();
+})
 
-window.onload = function() {
+var setup = function(){
+	var words = ['cat', 'dog', 'lizard', 'bunny', 'super'];
+	var lettersGuessed = [];
+	var letters = $('.letters');
+	var player = "";
 
 
-var words = ['cat', 'dog', 'lizard', 'bunny', 'super'];
-var lettersGuessed = []
-var secretWord  = words[Math.floor(Math.random() * words.length)];
-var letters = $('.letters')
-
-
-/*for(var i = 0; i < letters.length; i++){
-	letters[i].addEventListener('click', chooseWord);
-}*/
-    $(function() { 
 	$('.letters').on('click', function() {
-	 console.log('i\'ve been clicked')
-
+	});
+	$('#btn').on('click', function() {
+		var secretWord  = words[Math.floor(Math.random() * words.length)];
+		$('#chosen-word').prepend(secretWord);
+		$('#btn').hide()
 	})
 
+} 
 
-	function chooseWord(){
-   
-
-	}
-
-
-	})
-
-
-
+function chooseWord(){
 
 }

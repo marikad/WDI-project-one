@@ -11,3 +11,7 @@
 	text-align: center;
 
 }
+
+#chosen-word{
+	display: none;
+}
