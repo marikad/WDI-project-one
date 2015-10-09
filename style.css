@@ -1,15 +1,18 @@
-
-
 .letters {
-    background-color: rebeccapurple;
-    display: inline;
-    font-size: 40px;
+  background-color: rebeccapurple;
+  display: inline;
+  font-size: 40px;
 }
-
 
 .letter-buttons{
 	text-align: center;
+}
 
+.chosen-word li {
+	width: 50px;
+	margin: 0 5px;
+	border-bottom: 2px solid #000;
+	display: inline-block;
 }
 
 /*#chosen-word{

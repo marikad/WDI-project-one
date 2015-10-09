@@ -1,31 +1,46 @@
-$(function(){
-	setup();
-})
+$(setup);
 
-var setup = function(){
-	var words = ['cat', 'dog', 'lizard', 'bunny', 'super'];
-	var letters = $('.letters');
-	var player = "";
+var letters,
+		lettersGuessed = [],
+		word;
 
-
-	$('.letters').on('click', function() {
-	});
-	$('#btn').on('click', function() {
-		$('#chosen-word').html($('input').val());
-	var secretWord  = words[Math.floor(Math.random() * words.length)];
-        
-	})  
-
+function setup(){
+	letters = $('.letters');
+	setupEvents();
 } 
 
-function chooseLetter(){
-	var lettersGuessed = [];
-	for(var i = 0; i < lettersGuessed.length; i++){
-
-
-	}
+function setupEvents(){
+	$('.letters').on('click', chooseLetter);
+	$('#btn').on('click', chooseWord)
 }
 
-//one player
+function chooseWord(){
+	word = $('input').val();
+	$('#chosen-word').html(word);
+	// Setup spaces
+	var wordArray = word.split("");
+	console.log(wordArray)
+	$.each(wordArray, function(element){
+		$('.chosen-word').append("<li></li>");
+	})
+	
+}
 
+function chooseLetter(){
+	var letter = $(this).text().toLowerCase();
+	lettersGuessed.push(letter)
+	checkLetter(letter)
+	console.log(lettersGuessed);
+}
 
+function checkLetter(letter){
+	var index = word.indexOf(letter);
+	if (index !== -1) {
+		// correct guess
+		alert("correct")
+		// Fill in the letter
+		$($('.chosen-word li')[index]).html(letter)
+	} else {
+		// incorrect guess -> build hangman
+	}
+}
