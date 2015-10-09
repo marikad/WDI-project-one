@@ -44,3 +44,4 @@ function checkLetter(letter){
 		// incorrect guess -> build hangman
 	}
 }
+
