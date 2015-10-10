@@ -11,7 +11,7 @@ function setup(){
 
 function setupEvents(){
 	$('.letters').on('click', chooseLetter);
-	$('#btn').on('click', chooseWord)
+	$('.btn').on('click', chooseWord)
 }
 
 function chooseWord(){

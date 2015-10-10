@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Hangman!</title>
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -12,42 +12,43 @@
 	<main>
 		<div class ="top-border">
 		<h1>Hangman!</h1>
-		<a href="#"><h2>Start Over</h2></a>
+		<!--<a href="#"><p>Start Over</p></a>-->
 		</div>
 		<div id="chosen-word"></div>
 		<ul class="chosen-word"></ul>
 			<li class="letter-buttons">
-				<a href="#" class="myButton">A</a>
-				<a href="#" class="myButton">B</a>
-				<a href="#" class="myButton">C</a>
-				<a href="#" class="myButton">D</a>
-				<a href="#" class="myButton">E</a>
-				<a href="#" class="myButton">F</a>
-				<a href="#" class="myButton">G</a>
-				<a href="#" class="myButton">H</a>
-				<a href="#" class="myButton">I</a>
-				<a href="#" class="myButton">J</a>
-				<a href="#" class="myButton">K</a>
-				<a href="#" class="myButton">L</a>
-				<a href="#" class="myButton">M</a>
-				<a href="#" class="myButton">N</a>
-				<a href="#" class="myButton">O</a>
-				<a href="#" class="myButton">P</a>
-				<a href="#" class="myButton">Q</a>
-				<a href="#" class="myButton">R</a>
-				<a href="#" class="myButton">S</a>
-				<a href="#" class="myButton">T</a>
-				<a href="#" class="myButton">U</a>
-				<a href="#" class="myButton">V</a>
-				<a href="#" class="myButton">W</a>
-				<a href="#" class="myButton">X</a>
-				<a href="#" class="myButton">Y</a>
-				<a href="#" class="myButton">Z</a>
+				<a href="#" class="myButton letters">A</a>
+				<a href="#" class="myButton letters">B</a>
+				<a href="#" class="myButton letters">C</a>
+				<a href="#" class="myButton letters">D</a>
+				<a href="#" class="myButton letters">E</a>
+				<a href="#" class="myButton letters">F</a>
+				<a href="#" class="myButton letters">G</a>
+				<a href="#" class="myButton letters">H</a>
+				<a href="#" class="myButton letters">I</a>
+				<a href="#" class="myButton letters">J</a>
+				<a href="#" class="myButton letters">K</a>
+				<a href="#" class="myButton letters">L</a>
+				<a href="#" class="myButton letters">M</a>
+				<a href="#" class="myButton letters">N</a>
+				<a href="#" class="myButton letters">O</a>
+				<a href="#" class="myButton letters">P</a>
+				<a href="#" class="myButton letters">Q</a>
+				<a href="#" class="myButton letters">R</a>
+				<a href="#" class="myButton letters">S</a>
+				<a href="#" class="myButton letters">T</a>
+				<a href="#" class="myButton letters">U</a>
+				<a href="#" class="myButton letters">V</a>
+				<a href="#" class="myButton letters">W</a>
+				<a href="#" class="myButton letters">X</a>
+				<a href="#" class="myButton letters">Y</a>
+				<a href="#" class="myButton letters">Z</a>
 			</li>
 	<div class="user-input">
 	<p class="type-word">Type a word.</p>
 		<input id="user-input" type="password" name ="Pick a word!">
 	 	<a href="#" class="btn">Let's get cracking!</a>
+	 	<ul class="chosen-word"></ul>
 	</div>
 </main>
 
