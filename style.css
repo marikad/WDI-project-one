@@ -1,161 +1,184 @@
 /********************************
 main elements
 *********************************/
-
-body{
-	background: #000;
+body {
+    background: #000
 }
 
-main{
-overflow: hidden;
-
+main {
+    overflow: hidden
 }
 
 /********************************
 header
 *********************************/
-
 h1 {
-	font-size: 50px;
-	font-family: lobster;
-	margin-left: 20px;
-	display: inline-block;
-	color: #000;
+    font-size: 50px;
+    font-family: lobster;
+    margin-left: 20px;
+    display: inline-block;
+    color: #000
 }
 
-.top-border{
-	background-color: #fff;
-	width: 1430px;
-	height: 60px;
-	padding-top: 5px;
+.top-border {
+    background-color: #fff;
+    width: 1430px;
+    height: 60px;
+    padding-top: 5px
 }
 
 /********************************
 input word
 *********************************/
-
-input{
-	width: 155px;
-	height: 21px;
-	margin-left: 20px;
-	background-color: #969696;
-	border: none;
+input {
+    width: 243px;
+    height: 46px;
+    margin-left: 20px;
+    background-color: #969696;
+    border: none;
+    font-size: 30px;
+    margin-top: 12px
 }
 
-.type-word{
-	color: #fff;
-	font-size: 42px;
-	margin-left: 20px;
-	font-family: TimeBurner;
+.type-word {
+    color: #fff;
+    font-size: 70px;
+    margin-left: 20px;
+    font-family: TimeBurner
 }
 
 button {
-	height: 25px;
-	border-radius: 47%;
+    height: 25px;
+    border-radius: 47%
 }
 
-.user-input{
-	margin-top: 46px;
+.user-input {
+    float: left;
+    margin-top: 26px
+}
+
+/********************************
+left
+*********************************/
+.left {
+    margin-bottom: 20px
+}
+
+/********************************
+right
+*********************************/
+.input-container {
+    overflow: hidden;
+    display: inline
+}
+
+ul.chosen-word {
+    margin-left: 20px
 }
 
 /********************************
 letter buttons
 *********************************/
-
-li.letter-buttons{
-	float: right;
-	width: 50%
-
+.row-image {
+    background-color: #fff;
+    width: 474px;
+    height: 70px;
+    border: 1px solid #000
 }
 
+.image-container {
+    overflow: hidden;
+    margin-right: 53px;
+    margin-top: 38px
+}
 
+.image-appear {
+    float: right
+}
+
+/********************************
+letter buttons
+*********************************/
+li.letter-buttons {
+    float: right;
+    width: 50%
+}
 
 .chosen-word li {
-	/*margin: 0 5px;
-	border-bottom: 2px solid #000;*/
-	display: inline-block;
-	font-size: 40px;
-	font-family: lobster;
-	color: #fff;
-	margin-left: 15px;
+    display: inline-block;
+    font-size: 40px;
+    font-family: lobster;
+    color: #fff;
+    margin-left: 9px
 }
 
-#chosen-word{
-	display: none;
+#chosen-word {
+    display: none
 }
 
 .myButton {
-	background-color:#ffffff;
-	-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-	border-radius:8px;
-	display:inline-block;
-	cursor:pointer;
-	color:#000000;
-	font-family: TimeBurner;
-	font-size:26px;
-	font-weight:bold;
-	padding:7px 17px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #000000;
-	font-size: 40px;
-	margin-top: 15px;
-	margin-right: 16px;
-
+    background-color: #fff;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: #000;
+    font-family: TimeBurner;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 7px 17px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+    font-size: 40px;
+    margin-top: 15px;
+    margin-right: 16px
 }
 
-#number-of-letters{
-	color: #fff;
-	font-size: 34px;
-	margin-left: 26px;
+#number-of-letters {
+    color: #fff;
+    font-size: 34px;
+    margin-left: 26px;
+    margin-top: 25px
 }
 
-.myButton:hover
-{
-        -webkit-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        transform: scale(1.3);
+.myButton:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3)
 }
-
 
 .btn {
-	-moz-box-shadow:inset 0px 0px 15px 3px #343838;
-	-webkit-box-shadow:inset 0px 0px 15px 3px #343838;
-	box-shadow:inset 0px 0px 15px 3px #343838;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #6b686b));
-	background:-moz-linear-gradient(top, #ffffff 5%, #6b686b 100%);
-	background:-webkit-linear-gradient(top, #ffffff 5%, #6b686b 100%);
-	background:-o-linear-gradient(top, #ffffff 5%, #6b686b 100%);
-	background:-ms-linear-gradient(top, #ffffff 5%, #6b686b 100%);
-	background:linear-gradient(to bottom, #ffffff 5%, #6b686b 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#6b686b',GradientType=0);
-	background-color:#ffffff;
-	-moz-border-radius:11px;
-	-webkit-border-radius:11px;
-	border-radius:11px;
-	border:1px solid #7a818c;
-	display:inline-block;
-	cursor:pointer;
-	color:#000000;
-	font-family:Arial;
-	font-size:18px;
-	padding:6px 13px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #000000;
+    -webkit-box-shadow: inset 0 0 15px 3px #343838;
+    box-shadow: inset 0 0 15px 3px #343838;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0.05,#fff),color-stop(1,#6b686b));
+    background: linear-gradient(to bottom,#fff 5%,#6b686b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#6b686b',GradientType=0);
+    background-color: #fff;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    border-radius: 11px;
+    border: 1px solid #7a818c;
+    display: block;
+    cursor: pointer;
+    color: #000;
+    font-family: Montserrat Alternate;
+    font-size: 37px;
+    padding: 6px 13px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 134px
 }
+
 .btn:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6b686b), color-stop(1, #ffffff));
-	background:-moz-linear-gradient(top, #6b686b 5%, #ffffff 100%);
-	background:-webkit-linear-gradient(top, #6b686b 5%, #ffffff 100%);
-	background:-o-linear-gradient(top, #6b686b 5%, #ffffff 100%);
-	background:-ms-linear-gradient(top, #6b686b 5%, #ffffff 100%);
-	background:linear-gradient(to bottom, #6b686b 5%, #ffffff 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b686b', endColorstr='#ffffff',GradientType=0);
-	background-color:#6b686b;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0.05,#6b686b),color-stop(1,#fff));
+    background: -webkit-linear-gradient(top,#6b686b 5%,#fff 100%);
+    background: linear-gradient(to bottom,#6b686b 5%,#fff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b686b',endColorstr='#ffffff',GradientType=0);
+    background-color: #6b686b
 }
-
-
-
 
 
 

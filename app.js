@@ -1,48 +1,47 @@
 $(setup);
-
 var letters,
-		lettersGuessed = [],
-		word;
+    lettersGuessed = [],
+    word;
 
-function setup(){
-	letters = $('.letters');
-	setupEvents();
-} 
-
-function setupEvents(){
-	$('.letters').on('click', chooseLetter);
-	$('.btn').on('click', chooseWord)
+function setup() {
+    letters = $('.letters');
+    setupEvents();
 }
 
-function chooseWord(){
-	word = $('input').val();
-	$('#chosen-word').html(word);
-	// Setup spaces
-	var wordArray = word.split("");
-	console.log(wordArray)
-	$.each(wordArray, function(element){
-	$('.chosen-word').append("<li></li>");
-	document.getElementById("number-of-letters").innerHTML = "There are " + word.length + " letters in this word";
-	})
-	
+function setupEvents() {
+    $('.letters').on('click', chooseLetter);
+    $('.btn').on('click', chooseWord)
 }
 
-function chooseLetter(){
-	var letter = $(this).text().toLowerCase();
-	lettersGuessed.push(letter)
-	checkLetter(letter)
-	console.log(lettersGuessed);
+function chooseWord() {
+    word = $('input').val();
+    $('#chosen-word').html(word);
+    // Setup spaces
+    var wordArray = word.split("");
+    console.log(wordArray)
+    $.each(wordArray, function(element) {
+        $('.chosen-word').append("<li></li>");
+        document.getElementById("number-of-letters").innerHTML =
+            "There are " + word.length + " letters in this word";
+    })
 }
 
-function checkLetter(letter){
-	var index = word.indexOf(letter);
-	if (index !== -1) {
-		// correct guess
-		alert("correct")
-		// Fill in the letter
-		$($('.chosen-word li')[index]).html(letter)
-	} else {
-		// incorrect guess -> build hangman
-	}
+function chooseLetter() {
+    var letter = $(this).text().toLowerCase();
+    lettersGuessed.push(letter)
+    checkLetter(letter)
+    console.log(lettersGuessed);
 }
 
+function checkLetter(letter) {
+    var index = word.indexOf(letter);
+    if (index !== -1) {
+        // correct guess
+        alert("correct")
+            // Fill in the letter
+        $($('.chosen-word li')[index]).html(letter)
+    } else {
+        $('#row-image1').show("slow").hide("slow");
+        //$('#row-image2').show("slow").hide("slow");
+    }
+}
