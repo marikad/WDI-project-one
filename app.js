@@ -21,7 +21,8 @@ function chooseWord(){
 	var wordArray = word.split("");
 	console.log(wordArray)
 	$.each(wordArray, function(element){
-		$('.chosen-word').append("<li></li>");
+	$('.chosen-word').append("<li></li>");
+	document.getElementById("number-of-letters").innerHTML = "There are " + word.length + " letters in this word";
 	})
 	
 }

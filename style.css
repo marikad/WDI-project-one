@@ -1,3 +1,7 @@
+/********************************
+main elements
+*********************************/
+
 body{
 	background: #000;
 }
@@ -7,6 +11,10 @@ overflow: hidden;
 
 }
 
+/********************************
+header
+*********************************/
+
 h1 {
 	font-size: 50px;
 	font-family: lobster;
@@ -15,24 +23,16 @@ h1 {
 	color: #000;
 }
 
-/*a p{
-	font-family: lobster;
-	font-size: 30px;
-	margin-right: 20px;
-	line-height: 0;
-	padding-bottom: 20px;
-	display: inline-block;
-	cursor: pointer;
-	color: #000;
-
-}*/
-
 .top-border{
 	background-color: #fff;
 	width: 1430px;
 	height: 60px;
 	padding-top: 5px;
 }
+
+/********************************
+input word
+*********************************/
 
 input{
 	width: 155px;
@@ -55,22 +55,29 @@ button {
 }
 
 .user-input{
+	margin-top: 46px;
+}
+
+/********************************
+letter buttons
+*********************************/
+
+li.letter-buttons{
 	float: right;
+	width: 50%
+
 }
 
 
-.letter-buttons{
-	text-align: center;
-}
 
 .chosen-word li {
-	width: 50px;
 	/*margin: 0 5px;
 	border-bottom: 2px solid #000;*/
 	display: inline-block;
 	font-size: 40px;
 	font-family: lobster;
 	color: #fff;
+	margin-left: 15px;
 }
 
 #chosen-word{
@@ -92,7 +99,15 @@ button {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #000000;
 	font-size: 40px;
+	margin-top: 15px;
+	margin-right: 16px;
 
+}
+
+#number-of-letters{
+	color: #fff;
+	font-size: 34px;
+	margin-left: 26px;
 }
 
 .myButton:hover
