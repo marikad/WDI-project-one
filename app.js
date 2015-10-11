@@ -24,7 +24,8 @@ function chooseWord() {
         $('.chosen-word').append("<li></li>");
         document.getElementById("number-of-letters").innerHTML =
             "There are " + word.length + " letters in this word";
-
+            document.getElementById("rules").innerHTML = 
+            "Guess the letters in the word and if you are wrong well..."
     })
 }
 
