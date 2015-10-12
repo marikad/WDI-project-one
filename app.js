@@ -28,6 +28,9 @@ function chooseWord() {
     	"There are " + word.length + " letters in this word";
     	document.getElementById("rules").innerHTML = 
     	"Guess the letters in the word and if you are wrong well..."
+    	$('.myButton').on('click', function() {
+    		$(this).hide(".myButton");
+    	})
     })
   }
 
@@ -44,7 +47,7 @@ function chooseWord() {
   	// check where in the correct word, the chosen letter is found
   	var index = word.indexOf(letter);
   	// create array to store multiple indexs
-  	var correctIndex=[]
+  	var correctIndex = []
 
   	if (index == -1) {
   		wrongChoice += 1
@@ -60,16 +63,31 @@ function chooseWord() {
   		console.log(correctIndex)
   			// MAGIC
   			index = word.indexOf(letter, index + 1);
-        // correct guess
+        // correct guess  
         // for each of our indexs that we found, loop through, and add to html
         $(correctIndex).each(function(index, letterIndex){
-        	$($('.chosen-word li')[letterIndex]).html(letter);
+        	if(winner(lettersGuessed, word.split(""))){
+        		$("#rules").html("")
+        		$("#number-of-letters").html("Winner!")
+        	}
+        	$($('.chosen-word                                                                                                     li')[letterIndex]).html(letter);
         })
       }
     } 
   }
 
 
-    function winner(){
-     
+    function winner(lettersGuessed, word){
+     //write a variable to check the length of a word and loop though it
+     var count = 0 
+     for (var i = 0; i < word.length; i++) {
+     	if(lettersGuessed.indexOf(word[i])>-1){
+     		count++
+     	}
+     };
+     if (word.length === count) {
+     	return true
+     } else {
+     	return false
+     };
     }
