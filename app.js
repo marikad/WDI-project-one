@@ -42,7 +42,6 @@ function chooseWord() {
   }
 
 
-
   function checkLetter(letter) {
   	// check where in the correct word, the chosen letter is found
   	var index = word.indexOf(letter);
@@ -68,7 +67,10 @@ function chooseWord() {
         $(correctIndex).each(function(index, letterIndex){
         	if(winner(lettersGuessed, word.split(""))){
         		$("#rules").html("")
-        		$("#number-of-letters").html("Winner!")
+        		$("#number-of-letters").html("You won! You owe one beer!")
+        	} else {
+        		$("#rules").html("")
+        		$("#number-of-letters").html("You just got beat by the Hoff!");
         	}
         	$($('.chosen-word                                                                                                     li')[letterIndex]).html(letter);
         })
@@ -78,7 +80,7 @@ function chooseWord() {
 
 
     function winner(lettersGuessed, word){
-     //write a variable to check the length of a word and loop though it
+     //write a variable to check  the length of a word and loop though it
      var count = 0 
      for (var i = 0; i < word.length; i++) {
      	if(lettersGuessed.indexOf(word[i])>-1){
