@@ -2,7 +2,7 @@
 main elements
 *********************************/
 body {
-    background: #000
+    background: #000;
 }
 
 main {
@@ -52,8 +52,7 @@ input {
 }
 
 button {
-    height: 25px;
-    border-radius: 47%
+   float: left;
 }
 
 .user-input {
@@ -169,6 +168,12 @@ li.letter-buttons {
 	font-size: 33px;
 	line-height: 1em;
 	font-family: acme;
+	}
+
+	.winning-message{
+		color: #fff;
+		font-family: acme;
+		font-size: 33px;
 	}
 
 

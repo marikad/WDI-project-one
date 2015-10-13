@@ -1,9 +1,9 @@
 $(setup);
 
 var letters,
-lettersGuessed = [],
-word,
-wrongChoice = -1;
+		lettersGuessed = [],
+		word,
+		wrongChoice = -1;
 
 function setup() {
 	letters = $('.letters');
@@ -27,11 +27,12 @@ function chooseWord() {
     	document.getElementById("number-of-letters").innerHTML =
     	"There are " + word.length + " letters in this word";
     	document.getElementById("rules").innerHTML = 
-    	"Guess the letters in the word and if you are wrong well..."
+    	"Guess the letters and if you are wrong well..."
     	$('.myButton').on('click', function() {
     		$(this).hide(".myButton");
     	})
     })
+
   }
 
   function chooseLetter() {
@@ -39,6 +40,14 @@ function chooseWord() {
   	lettersGuessed.push(letter)
   	checkLetter(letter)
   	console.log(lettersGuessed);
+
+  	if(wrongChoice > 3){
+  		$("#rules").html("")
+  		$("#number-of-letters").html("You just got beat by the Hoff!");
+  		$('#play-again').html('<button class="play-again-btn">"Play Again</button>')
+  	}
+
+  	$('button.play-again-btn').on('click', playAgain);
   }
 
 
@@ -67,29 +76,30 @@ function chooseWord() {
         $(correctIndex).each(function(index, letterIndex){
         	if(winner(lettersGuessed, word.split(""))){
         		$("#rules").html("")
-        		$("#number-of-letters").html("You won! You owe one beer!")
-        	} else {
-        		$("#rules").html("")
-        		$("#number-of-letters").html("You just got beat by the Hoff!");
-        	}
-        	$($('.chosen-word                                                                                                     li')[letterIndex]).html(letter);
+        		$("#number-of-letters").html("You won! Hoff owes you a beer!")
+        		$('#play-again').html('<button class="play-again-btn">"Play Again</button>')
+        	}  
+        	$($('.chosen-word                                                                                                   li')[letterIndex]).html(letter);
         })
       }
     } 
   }
 
+  function playAgain(){               
+  	location.reload()
+  }
 
-    function winner(lettersGuessed, word){
-     //write a variable to check  the length of a word and loop though it
-     var count = 0 
-     for (var i = 0; i < word.length; i++) {
-     	if(lettersGuessed.indexOf(word[i])>-1){
-     		count++
-     	}
-     };
-     if (word.length === count) {
-     	return true
-     } else {
-     	return false
-     };
-    }
+
+  function winner(lettersGuessed, word){
+   var count = 0 
+   for (var i = 0; i < word.length; i++) {
+   	if(lettersGuessed.indexOf(word[i])>-1){
+   		count++
+   	}
+   };
+   if (word.length === count) {
+   	return true
+   } else {
+   	return false
+   };
+  }
