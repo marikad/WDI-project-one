@@ -79,7 +79,7 @@ function chooseWord() {
         		$("#number-of-letters").html("You won! Hoff owes you a beer!")
         		$('#play-again').html('<button class="play-again-btn">Play Again</button>')
         	}  
-        	$($('.chosen-word                                                                                                   li')[letterIndex]).html(letter);
+        	$($('.chosen-word   4                                                                                                li')[letterIndex]).html(letter);
         })
       }
     } 
