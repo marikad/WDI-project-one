@@ -10,7 +10,7 @@ I built the game in jquery html and css.
 
 1. player one types a word.
 
-![alt text](/Users/marika/Desktop/Screen\ Shot\ 2015-10-13\ at\ 20.35.26.png  "Lstart of game")
+![](./images/game1.png)
 
 2. player 2 tries to guess the word by pushing the letter buttons.
 3. letter will appear if the correct button is chosen.
