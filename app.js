@@ -44,7 +44,7 @@ function chooseWord() {
   	if(wrongChoice > 3){
   		$("#rules").html("")
   		$("#number-of-letters").html("You just got beat by the Hoff!");
-  		$('#play-again').html('<button class="play-again-btn">"Play Again</button>')
+  		$('#play-again').html('<button class="play-again-btn">Play Again</button>')
   	}
 
   	$('button.play-again-btn').on('click', playAgain);
@@ -77,7 +77,7 @@ function chooseWord() {
         	if(winner(lettersGuessed, word.split(""))){
         		$("#rules").html("")
         		$("#number-of-letters").html("You won! Hoff owes you a beer!")
-        		$('#play-again').html('<button class="play-again-btn">"Play Again</button>')
+        		$('#play-again').html('<button class="play-again-btn">Play Again</button>')
         	}  
         	$($('.chosen-word                                                                                                   li')[letterIndex]).html(letter);
         })

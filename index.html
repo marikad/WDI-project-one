@@ -1,89 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hangman!</title>
-    <link href="reset.css" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <script src=
-    "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="app.js" type="text/javascript"></script>
+	<title>Hangman!</title>
+	<link href="reset.css" rel="stylesheet" type="text/css">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src=
+	"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="app.js" type="text/javascript"></script>
 </head>
 
 <body>
-    <main>
-        <div class="top-border">
-            <h1>Hangman!</h1>
-        </div>
+	<main>
+		<div class="top-border">
+			<h1>Sexy Hangman!</h1>
+		</div>
 
-        <div class="input-container">
-            <div class="user-input">
-                <p class="type-word">Type a word</p><input id="user-input"
-                name="Pick a word!" type="password"> <a class="btn" href=
-                "#">Let's go!</a>
+		<div class="input-container">
+			<div class="user-input">
+				<p class="type-word">Type a word</p><input id="user-input"
+				name="Pick a word!" type="password"> <a class="btn" href=
+				"#">Let's go!</a>
 
-            </div>
-           <div class="number-wrapper">
-            <div class="number-containing">
-            <div class="winning-message"></div>
-            <div id="number-of-letters"></div>
-            <p id="rules"></p>
-            <ul class="chosen-word"></ul>
-            </div>
-            <div id="play-again">
-            	
-            </div>
-            </div>
-        </div>
+			</div>
+			<div class="number-wrapper">
+				<div class="number-containing">
+					<div class="winning-message"></div>
+					<div id="number-of-letters"></div>
+					<p id="rules"></p>
+					<ul class= "chosen-word"></ul>
+					<div id="play-again"></div>
+				</div>
+			</div>
+		</div>
 
-        <div class="left">
-            <div class="image-container">
-                <div class="image-appear">
-                    <ul class="photo">
-                        <li class="row-image"></li>
+		<div class="left">
+			<div class="image-container">
+				<div class="image-appear">
+					<ul class="photo">
+						<li class="row-image"></li>
 
-                        <li class="row-image"></li>
+						<li class="row-image"></li>
 
-                        <li class="row-image"></li>
+						<li class="row-image"></li>
 
-                        <li class="row-image"></li>
+						<li class="row-image"></li>
 
-                        <li class="row-image"></li>
-                    </ul>
-                </div>
-            </div>
+						<li class="row-image"></li>
+					</ul>
+				</div>
+			</div>
 
-            <ul>
-                <li class="letter-buttons">
-                    <a class="myButton letters" href="#">A</a> <a class=
-                    "myButton letters" href="#">B</a> <a class=
-                    "myButton letters" href="#">C</a> <a class=
-                    "myButton letters" href="#">D</a> <a class=
-                    "myButton letters" href="#">E</a> <a class=
-                    "myButton letters" href="#">F</a> <a class=
-                    "myButton letters" href="#">G</a> <a class=
-                    "myButton letters" href="#">H</a> <a class=
-                    "myButton letters" href="#">I</a> <a class=
-                    "myButton letters" href="#">J</a> <a class=
-                    "myButton letters" href="#">K</a> <a class=
-                    "myButton letters" href="#">L</a> <a class=
-                    "myButton letters" href="#">M</a> <a class=
-                    "myButton letters" href="#">N</a> <a class=
-                    "myButton letters" href="#">O</a> <a class=
-                    "myButton letters" href="#">P</a> <a class=
-                    "myButton letters" href="#">Q</a> <a class=
-                    "myButton letters" href="#">R</a> <a class=
-                    "myButton letters" href="#">S</a> <a class=
-                    "myButton letters" href="#">T</a> <a class=
-                    "myButton letters" href="#">U</a> <a class=
-                    "myButton letters" href="#">V</a> <a class=
-                    "myButton letters" href="#">W</a> <a class=
-                    "myButton letters" href="#">X</a> <a class=
-                    "myButton letters" href="#">Y</a> <a class=
-                    "myButton letters" href="#">Z</a>
-                </li>
-            </ul>
-        </div>
+			<ul>
+				<li class="letter-buttons">
+					<a class="myButton letters" href="#">A</a> <a class=
+					"myButton letters" href="#">B</a> <a class=
+					"myButton letters" href="#">C</a> <a class=
+					"myButton letters" href="#">D</a> <a class=
+					"myButton letters" href="#">E</a> <a class=
+					"myButton letters" href="#">F</a> <a class=
+					"myButton letters" href="#">G</a> <a class=
+					"myButton letters" href="#">H</a> <a class=
+					"myButton letters" href="#">I</a> <a class=
+					"myButton letters" href="#">J</a> <a class=
+					"myButton letters" href="#">K</a> <a class=
+					"myButton letters" href="#">L</a> <a class=
+					"myButton letters" href="#">M</a> <a class=
+					"myButton letters" href="#">N</a> <a class=
+					"myButton letters" href="#">O</a> <a class=
+					"myButton letters" href="#">P</a> <a class=
+					"myButton letters" href="#">Q</a> <a class=
+					"myButton letters" href="#">R</a> <a class=
+					"myButton letters" href="#">S</a> <a class=
+					"myButton letters" href="#">T</a> <a class=
+					"myButton letters" href="#">U</a> <a class=
+					"myButton letters" href="#">V</a> <a class=
+					"myButton letters" href="#">W</a> <a class=
+					"myButton letters" href="#">X</a> <a class=
+					"myButton letters" href="#">Y</a> <a class=
+					"myButton letters" href="#">Z</a>
+				</li>
+			</ul>
+		</div>
 
-        <div id="chosen-word"></div>
-    </main>
+		<div id="chosen-word"></div>
+	</main>
 </body>
